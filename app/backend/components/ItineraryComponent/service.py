@@ -59,7 +59,7 @@ async def generate_itinerary(destination, days):
         f"Act like a travel planner. Plan a {days}-day trip to {destination} "
         "with food, stay, and activities. Give a detailed day-wise itinerary."
         "Give the output in terms of days and write separate paragraph for morning, afternoon, evening."
-        "If the number of days are large do not repeat the generated text. Generate itinerary for minimum 3 and maximum 5 days as per your understanding, but do not repeat the text."
+        "If the number of days are large do not repeat the generated text. Generate itinerary for maximum 5 days as per your understanding, but do not repeat the text."
         "And then write a paragraph about how can one spend the rest of the time taking walks in the city and do what interests them."
         "Write in this format:"
         "Day <day number>"

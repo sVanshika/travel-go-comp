@@ -33,8 +33,12 @@ export default function ItineraryPage() {
 
     try {
       // Calculate number of days between start and end date
+      console.log(startDate)
+      console.log(endDate)
       const diffTime = Math.abs(endDate - startDate);
+      console.log(diffTime)
       const numberOfDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end days
+      console.log(numberOfDays)
 
       const response = await fetch('http://127.0.0.1:8000/itinerary/generate', {
         method: 'POST',

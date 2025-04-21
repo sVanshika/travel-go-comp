@@ -9,7 +9,7 @@ app = FastAPI(title="TravelGo: AI Agentic Travel Planner")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://172.17.48.231:3000"],
+    allow_origins=["http://172.17.48.231:3000", "http://172.17.48.231:3001"],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True

@@ -238,7 +238,7 @@ export default function ItineraryDetailPage({ params }) {
             >
               Itinerary
             </button>
-            <button
+            {/* <button
               onClick={() => setActiveView('map')}
               className={`flex-1 px-4 py-2 text-sm font-medium rounded-md ${
                 activeView === 'map'
@@ -247,7 +247,7 @@ export default function ItineraryDetailPage({ params }) {
               }`}
             >
               Map View
-            </button>
+            </button> */}
             <button
               onClick={() => setActiveView('hotels')}
               className={`flex-1 px-4 py-2 text-sm font-medium rounded-md ${

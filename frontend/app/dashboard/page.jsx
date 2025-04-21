@@ -68,14 +68,14 @@ export default function DashboardPage() {
   // Mock data for past trips
   const pastTrips = [
     {
-      id: 5,
+      id: 9,
       destination: "Mumbai",
       startDate: "2024-01-10",
       endDate: "2024-01-15",
       image: "/images/destinations/mumbai.jpg",
     },
     {
-      id: 6,
+      id: 10,
       destination: "Delhi",
       startDate: "2023-11-05",
       endDate: "2023-11-10",
@@ -297,7 +297,7 @@ function TripCard({ trip, viewMode, isPast = false }) {
             </div>
             <div className="mt-4 flex gap-2">
               <Button asChild variant="outline" size="sm">
-                <Link href={`/itinerary/${trip.id}`}>View Itinerary</Link>
+                <Link href={`/explore/${trip.id}`}>View Itinerary</Link>
               </Button>
               <Button asChild size="sm">
                 <Link href={`/packing?trip=${trip.id}`}>Packing List</Link>
@@ -330,7 +330,7 @@ function TripCard({ trip, viewMode, isPast = false }) {
       </CardHeader>
       <CardFooter className="flex justify-between">
         <Button asChild variant="outline" size="sm">
-          <Link href={`/itinerary/${trip.id}`}>View Itinerary</Link>
+          <Link href={`/explore/${trip.id}`}>View Itinerary</Link>
         </Button>
         <Button asChild size="sm">
           <Link href={`/packing?trip=${trip.id}`}>Packing List</Link>

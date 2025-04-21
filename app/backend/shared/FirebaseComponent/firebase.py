@@ -9,6 +9,7 @@ from firebase_admin import auth, firestore
 from datetime import datetime
 from typing import List, Dict, Any
 import uuid
+import traceback
 
 # Load Firebase Admin credentials from environment
 cred_path = os.getenv("FIREBASE_ADMIN_CREDENTIAL")
@@ -34,11 +35,21 @@ def create_user(name: str, email: str, password: str):
     Creates a new user in Firebase Authentication and initializes their Firestore data.
     """
     try:
+        print("auth")
+        print(auth)
+        if not email or not password or not name:
+            raise ValueError("Email, password, and name must be provided.")
+        print("Creating user with:")
+        print(f"Name: {name}")
+        print(f"Email: {email}")
+        print(f"Password length: {len(password) if password else 'None'}")
         user_record = auth.create_user(
             email=email,
             password=password,
             display_name=name
         )
+        print("user_record")
+        print(user_record)
         
         # Prepare user data to be added to Firestore
         user_data = {
@@ -56,6 +67,8 @@ def create_user(name: str, email: str, password: str):
 
         # Add user data to Firestore
         user_ref = db.collection("users").document(user_record.uid)
+        print("user_ref")
+        print(user_ref)
         user_ref.set(user_data)
 
         # Initialize empty trips subcollection
@@ -72,7 +85,9 @@ def create_user(name: str, email: str, password: str):
             "createdAt": datetime.now().isoformat(),
             "updatedAt": datetime.now().isoformat()
         }
-        trips_ref.document("sample").set(sample_trip)
+        # trips_ref.document("sample").set(sample_trip)
+        print("user_record")
+        print(user_record)
         
         return {
             "uid": user_record.uid,
@@ -93,6 +108,9 @@ def create_user(name: str, email: str, password: str):
             raise HTTPException(status_code=400, detail=str(ve))
 
     except Exception as e:
+        print("🔥 Full exception traceback:")
+        traceback.print_exc()
+
         raise HTTPException(status_code=500, detail=f"Firebase error: {str(e)}")
 
 def update_user_profile(user_id: str, profile_data: Dict[str, Any]):
