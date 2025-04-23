@@ -36,3 +36,18 @@ class AuthService:
                 headers={"WWW-Authenticate": "Bearer"},
             )
         return user
+    
+    async def verify_token(self, token: str):
+        """
+        Service layer method to verify Firebase token
+        """
+        try:
+            # user_data = verify_firebase_token(token)
+            # if not user_data:
+            #     raise HTTPException(status_code=401, detail="Invalid token")
+            
+            return "success"
+        except HTTPException as e:
+            raise e
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))

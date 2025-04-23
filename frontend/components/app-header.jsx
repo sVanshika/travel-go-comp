@@ -84,14 +84,14 @@ export function AppHeader() {
                   <Map className="h-5 w-5" />
                   Plan Itinerary
                 </Link>
-                <Link
+                {/* <Link
                   href="/packing"
                   className="flex items-center gap-2 rounded-md px-3 py-2 text-lg font-medium hover:bg-accent"
                   onClick={() => setIsOpen(false)}
                 >
                   <Package className="h-5 w-5" />
                   Packing List
-                </Link>
+                </Link> */}
                 <button
                   onClick={handleLogout}
                   className="mt-4 flex items-center gap-2 rounded-md px-3 py-2 text-lg font-medium text-destructive hover:bg-destructive/10"

@@ -2,7 +2,7 @@
 
 ### How to run backend?
 1. cd app
-2. start virtual environment - source newvenv/bin/activate
+2. start virtual environment - source myenv/bin/activate (create one if not existing)
 3. cd backend
 4. uvicorn main:app --reload
 

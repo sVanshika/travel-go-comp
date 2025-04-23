@@ -108,12 +108,12 @@ export default function DashboardPage() {
               icon={<Package className="h-5 w-5" />}
               href="/packing"
             />
-            <QuickActionCard
+            {/* <QuickActionCard
               title="View Calendar"
               description="See all your upcoming trips"
               icon={<Calendar className="h-5 w-5" />}
               href="/calendar"
-            />
+            /> */}
             <QuickActionCard
               title="View Saved Trips"
               description="See all your saved trips"
@@ -223,9 +223,9 @@ export default function DashboardPage() {
 function QuickActionCard({ title, description, icon, href }) {
   const handleClick = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/auth/protected", {
-        credentials: "include",
-      });
+      // const res = await fetch("http://127.0.0.1:8000/auth/protected", {
+      //   credentials: "include",
+      // });
 
       // if (res.ok) {
       //   // User is authenticated, go to intended page

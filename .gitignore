@@ -1,3 +1,4 @@
 *.env
 *.key
 frontend/node_modules
+app/backend/shared/FirebaseComponent/ServiceAccountKey.json

@@ -130,7 +130,7 @@ export function LandingPage() {
           <div className="flex items-center">
             <span className="text-lg font-bold">TravelGo</span>
           </div>
-          <div className="flex gap-6 text-sm text-muted-foreground">
+          {/* <div className="flex gap-6 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground">
               About
             </Link>
@@ -143,7 +143,7 @@ export function LandingPage() {
             <Link href="#" className="hover:text-foreground">
               Contact
             </Link>
-          </div>
+          </div> */}
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} TravelGo. All rights reserved.
           </div>

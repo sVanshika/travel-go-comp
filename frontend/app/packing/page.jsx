@@ -387,7 +387,7 @@ function PackingListCard({
           ))}
         </div>
       </CardContent>
-      <CardFooter>
+      {/* <CardFooter>
         <Button className="w-full" onClick={onSave} disabled={!selectedTrip || listSaved || !hasChanges}>
           {listSaved ? (
             <>
@@ -401,7 +401,7 @@ function PackingListCard({
             </>
           )}
         </Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }
